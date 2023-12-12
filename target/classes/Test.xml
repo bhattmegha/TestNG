@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="testGoogle">
+	  <parameter name="url" value="https://www.google.co.uk/"/>
+	  
+    <classes>
+      <class name="com.test.TestNGGoogle"/>
+      <methods>
+		  <include name= "setUp"/>
+		  <include name = "TestGoogle"/>
+		  <include name = "TestFacebook"/>
+	  </methods>
+    </classes>
+  </test> 
+  <test name="OragneHRMTestLogin">
+    <classes>
+      <class name="com.test.OrangeHRMDemo"/>
+      <methods>
+		  <include name= "LaunchBrowser"/>
+		  <include name = "LoginDetails"/>
+	  </methods>     
+    </classes>
+  </test> 
+  <test name="OragneHRMTestInfo">
+    <classes>
+      <class name="com.test.OrangeHRMDemo"/>
+      <methods>
+		  <include name= "VerifyLogin"/>
+		  <include name = "VerifyMyInfo"/>
+	  </methods>     
+    </classes>
+  </test> 
+</suite> 
